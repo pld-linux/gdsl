@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc src/examples/* README TODO
 %attr(755,root,root) %{_libdir}/*.so
-%attr(755,root,root) %{_libdir}/*.la
+%{_libdir}/*.la
 %dir %{_includedir}/gdsl
 %{_includedir}/gdsl/*.h
 %{_mandir}/man3/*
