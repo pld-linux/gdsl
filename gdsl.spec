@@ -6,6 +6,7 @@ Release:	3
 License:	GPL v2
 Group:		Libraries
 Source0:	http://freesoftware.fsf.org/download/gdsl/%{name}-%{version}.tar.gz
+# Source0-md5:	39584bbcd66d231156341db4b0a6d454
 Patch0:		%{name}-ac.patch
 URL:		http://www.freesoftware.fsf.org/gdsl/
 BuildRequires:	autoconf
