@@ -2,7 +2,7 @@ Summary:	Generic Data Structures Library
 Summary(pl):	Biblioteka podstawowych struktur danych
 Name:		gdsl
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Libraries
 Source0:	http://freesoftware.fsf.org/download/gdsl/%{name}-%{version}.tar.gz
