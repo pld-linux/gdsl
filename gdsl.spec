@@ -64,7 +64,7 @@ Statyczna biblioteka podstawowych struktur danych.
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
