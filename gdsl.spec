@@ -8,6 +8,9 @@ Group:		Libraries
 Source0:	http://freesoftware.fsf.org/download/gdsl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac.patch
 URL:		http://www.freesoftware.fsf.org/gdsl/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,6 +63,7 @@ Statyczna biblioteka podstawowych struktur danych.
 
 %build
 rm -f missing
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %{__automake}
@@ -86,7 +90,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc src/examples/* README TODO
-%attr(755,root,root) %{_libdir}/*.so.?
 %attr(755,root,root) %{_libdir}/*.so
 %attr(755,root,root) %{_libdir}/*.la
 %dir %{_includedir}/gdsl
