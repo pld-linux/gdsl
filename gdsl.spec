@@ -19,6 +19,15 @@ implementation. Available structures are lists, queues, stacks, hash
 tables, binary trees, search binary trees, red-black trees, 2D arrays,
 and permutations.
 
+%description -l pl
+GSSL (Generic Data Structues Library) to przeno¶na i niezale¿na od
+systemu operacyjnego biblioteka operacji na podstawowych strukturach
+danych, napisana od zera w czystym ANSI C, dla programistów C.
+Wiêkszo¶æ ogólnych struktur danych jest dostêpna wraz z potê¿nymi
+algorytmami i ukryt± implementacj±. Dostêpne struktury to listy,
+kolejki, stosy, tablice haszuj±ce, drzewa binarne, drzewa wyszukiwañ
+binarnych, drzewa czerwono-czarne, tablice dwuwymiarowe i permutacje.
+
 %package devel
 Summary:	Header files and development documentation for Generic Data Structures Library
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteki podstawowych struktur danych
@@ -37,6 +46,7 @@ danych.
 Summary:	Static Generic Data Structures Library
 Summary(pl):	Statyczna biblioteka podstawowych struktur danych
 Group:		Development/Libraries
+Requires:	%{name}-deve = %{version}
 
 %description static
 Static Generic Data Structures Library.
@@ -62,11 +72,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
@@ -79,8 +89,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/*.so.?
 %attr(755,root,root) %{_libdir}/*.so
 %attr(755,root,root) %{_libdir}/*.la
+%dir %{_includedir}/gdsl
 %{_includedir}/gdsl/*.h
-
 %{_mandir}/man3/*
 
 %files static
