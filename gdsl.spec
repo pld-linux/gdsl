@@ -1,13 +1,12 @@
 Summary:	Generic Data Structures Library
 Summary(pl):	Biblioteka podstawowych struktur danych
 Name:		gdsl
-Version:	1.0
-Release:	3
+Version:	1.3
+Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://freesoftware.fsf.org/download/gdsl/%{name}-%{version}.tar.gz
-# Source0-md5:	39584bbcd66d231156341db4b0a6d454
-Patch0:		%{name}-ac.patch
+# Source0-md5:	9981f1ced783e30f50247e39179706bc
 URL:		http://www.freesoftware.fsf.org/gdsl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,7 +23,7 @@ tables, binary trees, search binary trees, red-black trees, 2D arrays,
 and permutations.
 
 %description -l pl
-GSSL (Generic Data Structues Library) to przeno¶na i niezale¿na od
+GDSL (Generic Data Structues Library) to przeno¶na i niezale¿na od
 systemu operacyjnego biblioteka operacji na podstawowych strukturach
 danych, napisana od zera w czystym ANSI C, dla programistów C.
 Wiêkszo¶æ ogólnych struktur danych jest dostêpna wraz z potê¿nymi
@@ -60,7 +59,6 @@ Statyczna biblioteka podstawowych struktur danych.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 rm -f missing
@@ -87,14 +85,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_libdir}/*.so.*.*
+%{_bindir}/%{name}-config
 
 %files devel
 %defattr(644,root,root,755)
-%doc src/examples/* README TODO
+%doc src/examples/* README TODO doc/html/*.html doc/html/*.css doc/html/*.png
 %attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
 %dir %{_includedir}/gdsl
 %{_includedir}/gdsl/*.h
+%{_includedir}/*.h
+
 %{_mandir}/man3/*
 
 %files static
