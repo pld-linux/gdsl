@@ -23,7 +23,7 @@ tables, binary trees, search binary trees, red-black trees, 2D arrays,
 and permutations.
 
 %description -l pl
-GDSL (Generic Data Structues Library) to przeno¶na i niezale¿na od
+GDSL (Generic Data Structures Library) to przeno¶na i niezale¿na od
 systemu operacyjnego biblioteka operacji na podstawowych strukturach
 danych, napisana od zera w czystym ANSI C, dla programistów C.
 Wiêkszo¶æ ogólnych struktur danych jest dostêpna wraz z potê¿nymi
@@ -61,7 +61,6 @@ Statyczna biblioteka podstawowych struktur danych.
 %setup -q
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -73,7 +72,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -83,15 +83,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS
-%attr(755,root,root) %{_libdir}/*.so.*.*
-%{_bindir}/%{name}-config
+%doc AUTHORS ChangeLog NEWS README THANKS TODO
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc src/examples/* README TODO doc/html/*.html doc/html/*.css doc/html/*.png
-%attr(755,root,root) %{_libdir}/*.so
-%{_libdir}/*.la
+%doc src/examples/* doc/html/*.html doc/html/*.css doc/html/*.png
+%attr(755,root,root) %{_bindir}/%{name}-config
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %dir %{_includedir}/gdsl
 %{_includedir}/gdsl/*.h
 %{_includedir}/*.h
@@ -100,4 +100,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files static
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_libdir}/*.a
+%{_libdir}/lib*.a
