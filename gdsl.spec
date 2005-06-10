@@ -5,9 +5,9 @@ Version:	1.3
 Release:	1
 License:	GPL v2
 Group:		Libraries
-Source0:	http://freesoftware.fsf.org/download/gdsl/%{name}-%{version}.tar.gz
+Source0:	http://download.gna.org/gdsl/%{name}-%{version}.tar.gz
 # Source0-md5:	9981f1ced783e30f50247e39179706bc
-URL:		http://www.freesoftware.fsf.org/gdsl/
+URL:		http://home.gna.org/gdsl/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -35,7 +35,7 @@ binarnych, drzewa czerwono-czarne, tablice dwuwymiarowe i permutacje.
 Summary:	Header files and development documentation for Generic Data Structures Library
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteki podstawowych struktur danych
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for Generic Data Structures
@@ -49,7 +49,7 @@ danych.
 Summary:	Static Generic Data Structures Library
 Summary(pl):	Statyczna biblioteka podstawowych struktur danych
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Generic Data Structures Library.
@@ -95,7 +95,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_includedir}/gdsl
 %{_includedir}/gdsl/*.h
 %{_includedir}/*.h
-
 %{_mandir}/man3/*
 
 %files static
