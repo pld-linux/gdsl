@@ -1,5 +1,5 @@
 Summary:	Generic Data Structures Library
-Summary(pl):	Biblioteka podstawowych struktur danych
+Summary(pl.UTF-8):   Biblioteka podstawowych struktur danych
 Name:		gdsl
 Version:	1.3
 Release:	1
@@ -22,18 +22,18 @@ implementation. Available structures are lists, queues, stacks, hash
 tables, binary trees, search binary trees, red-black trees, 2D arrays,
 and permutations.
 
-%description -l pl
-GDSL (Generic Data Structures Library) to przeno¶na i niezale¿na od
+%description -l pl.UTF-8
+GDSL (Generic Data Structures Library) to przenoÅ›na i niezaleÅ¼na od
 systemu operacyjnego biblioteka operacji na podstawowych strukturach
-danych, napisana od zera w czystym ANSI C, dla programistów C.
-Wiêkszo¶æ ogólnych struktur danych jest dostêpna wraz z potê¿nymi
-algorytmami i ukryt± implementacj±. Dostêpne struktury to listy,
-kolejki, stosy, tablice haszuj±ce, drzewa binarne, drzewa wyszukiwañ
+danych, napisana od zera w czystym ANSI C, dla programistÃ³w C.
+WiÄ™kszoÅ›Ä‡ ogÃ³lnych struktur danych jest dostÄ™pna wraz z potÄ™Å¼nymi
+algorytmami i ukrytÄ… implementacjÄ…. DostÄ™pne struktury to listy,
+kolejki, stosy, tablice haszujÄ…ce, drzewa binarne, drzewa wyszukiwaÅ„
 binarnych, drzewa czerwono-czarne, tablice dwuwymiarowe i permutacje.
 
 %package devel
 Summary:	Header files and development documentation for Generic Data Structures Library
-Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteki podstawowych struktur danych
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja do biblioteki podstawowych struktur danych
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -41,20 +41,20 @@ Requires:	%{name} = %{version}-%{release}
 Header files and development documentation for Generic Data Structures
 Library.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja do biblioteki podstawowych struktur
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja do biblioteki podstawowych struktur
 danych.
 
 %package static
 Summary:	Static Generic Data Structures Library
-Summary(pl):	Statyczna biblioteka podstawowych struktur danych
+Summary(pl.UTF-8):   Statyczna biblioteka podstawowych struktur danych
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Generic Data Structures Library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka podstawowych struktur danych.
 
 %prep
