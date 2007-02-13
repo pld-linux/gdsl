@@ -1,5 +1,5 @@
 Summary:	Generic Data Structures Library
-Summary(pl.UTF-8):   Biblioteka podstawowych struktur danych
+Summary(pl.UTF-8):	Biblioteka podstawowych struktur danych
 Name:		gdsl
 Version:	1.3
 Release:	1
@@ -33,7 +33,7 @@ binarnych, drzewa czerwono-czarne, tablice dwuwymiarowe i permutacje.
 
 %package devel
 Summary:	Header files and development documentation for Generic Data Structures Library
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja do biblioteki podstawowych struktur danych
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do biblioteki podstawowych struktur danych
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -47,7 +47,7 @@ danych.
 
 %package static
 Summary:	Static Generic Data Structures Library
-Summary(pl.UTF-8):   Statyczna biblioteka podstawowych struktur danych
+Summary(pl.UTF-8):	Statyczna biblioteka podstawowych struktur danych
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
