@@ -1,12 +1,12 @@
 Summary:	Generic Data Structures Library
 Summary(pl.UTF-8):	Biblioteka podstawowych struktur danych
 Name:		gdsl
-Version:	1.3
+Version:	1.4
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.gna.org/gdsl/%{name}-%{version}.tar.gz
-# Source0-md5:	9981f1ced783e30f50247e39179706bc
+# Source0-md5:	d72d91d6327ce45ab6103a6e0f84d89a
 URL:		http://home.gna.org/gdsl/
 BuildRequires:	autoconf
 BuildRequires:	automake
